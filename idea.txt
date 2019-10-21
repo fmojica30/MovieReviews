@@ -1,0 +1,15 @@
+The web page that we will be creating will be a page that compiles movie reviews from different websites as well as giving original movie reviews.
+The reason behind a website like this is to be able to provide enough information to consumers about a movie before they go out and see it.
+Movie tickets are expensive and most subscriptions are also starting to become more expensive. With the introduction of streaming services
+like Disney +, what used to be powerhouses in the streaming world, like Netflix and Hulu, will lose a large portion of their content. And in
+order to find out if purchasing a subscription or movie ticket is right for you, you need information. This website aims to be a one stop shop for all your movie information needs.
+Each movie will get its own page with reviews from different websites like IGN, Rotten Tomatoes, IMDB, and flixster.
+Pages will also include embedded video reviews from youtube among other video platforms , and podcasts that review movie like Now Playing, and Collider movie talk.
+Users will have the option to subscribe to certain creators or websites so their pages will look different for each user depending on their options.
+HTML will be used in order to give the website a user friendly layout, which is also appealing to the eyes. Cookies will keep track of the
+movie pages they have visited as well as the genre and actors in the movies in order to be able to make recommendations later on about what movies to watch.
+Another feature we would like to implement would a feature that shows you where to find the movies. For example, if the movie is in theaters it will give you
+showtimes for the nearest theater or if the movie is online it will show you which subscriptions have it or where you can rent it. The MySQL database will
+keep all user information and use it to give a positive experience to visitors. Overall the aim of the website will be to provide a place where consumers
+can go and get information in order to make an educated purchase. While there are websites that have reviews and such they only tend to show their own
+reviews, however we believe it is important to have multiple points of view on the movie in order to make a good decision. 
