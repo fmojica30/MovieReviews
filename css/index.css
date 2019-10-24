@@ -1,0 +1,67 @@
+* {
+  font-family: verdana;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 150px 50px repeat(6, 250px);
+  max-width: 1240px;
+  border: 5px solid black;
+  margin: auto;
+  grid-gap: 1em;
+}
+
+.header {
+  display: block;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 6;
+  border: 3px solid red;
+}
+
+.navBar {
+  display: block;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 6;
+  border: 3px solid red;
+}
+
+.genres {
+  display: block;
+  grid-row-start: 3;
+  grid-row-end: 7;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  border: 3px solid red;
+}
+
+.featured {
+  display: block;
+  grid-row-start: 3;
+  grid-row-end: 5;
+  grid-column-start: 2;
+  grid-column-end: 6;
+  border: 3px solid red;
+}
+
+.vidReviews{
+  display: block;
+  grid-row-start: 5;
+  grid-row-end: 7;
+  grid-column-start: 2;
+  grid-column-end: 6;
+  border: 3px solid red;
+}
+
+.userReviews {
+  display: block;
+  grid-row-start: 7;
+  grid-row-end: 9;
+  grid-column-start: 1;
+  grid-column-end: 6;
+  border: 3px solid red;
+}
