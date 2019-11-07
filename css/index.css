@@ -50,11 +50,13 @@
 }
 
 .genres {
-  display: block;
+  display: grid;
   grid-row-start: 3;
   grid-row-end: 7;
   grid-column-start: 1;
   grid-column-end: 2;
+  background: #687078;
+  border-radius: 20px;
 }
 
 .featured {
@@ -76,7 +78,7 @@
 
 h2 {
   color: #243447;
-  font-size: 30px;
+  font-size: 45px;
   margin: 0px;
   padding: 0px;
 }
@@ -90,6 +92,11 @@ h2 {
 }
 
 .movie_1 img {
+  height: 100%;
+  border-radius: 5%;
+}
+
+.movie_1 a {
   height: 97%;
   border-radius: 5%;
 }
@@ -103,6 +110,11 @@ h2 {
 }
 
 .movie_2 img {
+  height: 100%;
+  border-radius: 5%;
+}
+
+.movie_2 a {
   height: 97%;
   border-radius: 5%;
 }
@@ -115,11 +127,15 @@ h2 {
   justify-items: center;
 }
 
-.movie_3 img {
+.movie_3 a {
   height: 97%;
   border-radius: 5%;
 }
 
+.movie_3 img {
+  height: 100%;
+  border-radius: 5%;
+}
 
 .vidReviews{
   display: grid;
@@ -128,7 +144,15 @@ h2 {
   grid-column-start: 2;
   grid-column-end: 6;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 10% 88%;
+  grid-template-rows: 20% 78%;
+  background: #243447;
+  border-radius: 20px;
+}
+.vidReviews h2 {
+  color: #fff;
+  font-size: 45px;
+  margin: 0px;
+  padding: 0px;
 }
 
 .vid_head {
@@ -148,7 +172,6 @@ h2 {
   
 }
 
-
 .header_sep {
   display: grid;
   height: 150px;
@@ -166,4 +189,34 @@ h1 {
   padding: 0px;
   color: #243447;
   margin-right: 23%;
+}
+
+.trailer {
+  display: grid;
+  grid-template-rows: 1fr;
+  justify-items: center;
+  align-items: center;
+}
+
+.trailer iframe {
+  height: 80%;
+  width: 90%; 
+  border-radius: 20px;
+}
+
+.reviews {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows:  15% 80%;
+  grid-row-start: 7;
+  grid-row-end: 9;
+  grid-column-start: 1;
+  grid-column-end: 6;
+  align-items: center;
+  justify-items: center;
+}
+
+.creator_review_header {
+  grid-column: 2/3;
+  grid-row: 1/2;
 }
