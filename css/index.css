@@ -5,7 +5,7 @@
 .wrapper {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: 150px 75px repeat(6, 250px);
+  grid-template-rows: 150px 75px repeat(5, 250px) 500px;
   max-width: 1440px;
   margin: auto;
   grid-gap: 5px;
@@ -94,6 +94,7 @@ h2 {
 .movie_1 img {
   height: 100%;
   border-radius: 5%;
+  animation: out .56s;
 }
 
 .movie_1 a {
@@ -112,6 +113,7 @@ h2 {
 .movie_2 img {
   height: 100%;
   border-radius: 5%;
+  animation: out .56s;
 }
 
 .movie_2 a {
@@ -135,7 +137,34 @@ h2 {
 .movie_3 img {
   height: 100%;
   border-radius: 5%;
+  animation: out .56s;
 }
+
+.movie_display img {
+ 
+}
+
+.movie_display:hover {
+  animation: in .56s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes in {
+  from {
+    transform: scale(1);
+  } to {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes out {
+  from {
+    transform: scale(1.05);
+  } to {
+    transform: scale(1);
+  }
+}
+
 
 .vidReviews{
   display: grid;
@@ -161,15 +190,6 @@ h2 {
   grid-row: 1/2;
   align-items: center;
   justify-items: center;
-}
-
-.userReviews {
-  display: block;
-  grid-row-start: 7;
-  grid-row-end: 9;
-  grid-column-start: 1;
-  grid-column-end: 6;
-  
 }
 
 .header_sep {
@@ -202,6 +222,7 @@ h1 {
   height: 80%;
   width: 90%; 
   border-radius: 20px;
+  border: 0;
 }
 
 .reviews {
@@ -220,3 +241,81 @@ h1 {
   grid-column: 2/3;
   grid-row: 1/2;
 }
+
+.login_modal {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 30px 30px;
+  align-items: center;
+  justify-items: center;
+}
+
+.login_modal button {
+  width: 50%;
+}
+
+
+/* Genres */
+.genres {
+  display: grid;
+  grid-template-rows: repeat(8, 1fr);
+  justify-items: center;
+  align-items: center;
+}
+
+.genres h4 {
+  font-size: 40px;
+  color: #fff;
+}
+
+.genres button {
+  height: 40%;
+  width: 70%;
+  border: none;
+  border-radius: 15px;
+  background: #fff;
+  font-size: 25px;
+  color: #243447;
+}
+
+.genres button:hover {
+  background:  #243447;
+  color: #fff;
+}
+
+.genres button:active {
+  background: #fff; 
+  color: #243447;
+}
+
+/*Review */
+.user_reviews {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, 1fr);
+  align-items: center;
+  justify-items: center;
+}
+
+.review {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  background: #aaa;
+  height: 90%;
+  width: 90%;
+  border-radius: 25px;
+  overflow: scroll;
+}
+
+.reviewTitle {
+  margin-left: 10px;
+}
+
+.reviewContent {
+  margin-right: 10px;
+}
+
+
+
