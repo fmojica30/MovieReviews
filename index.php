@@ -1,3 +1,5 @@
+<?php
+print <<< HEAD
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -13,24 +15,60 @@
             <h1>Movi</h1>
         </div>
       </div>
-      <div class="navBar">
-        <div class="nav">
-          <a href="#login-form" rel="modal:open" method="POST">Login</a>       
-          <form id="login-form" class="modal">
-            <div class="login_modal">
-              <label for="username">Username: </label>
-              <input type="text" name="login" />
-              <label for="password">Password</label>
-              <input type="password" name="password">
-              <input type="submit" value="Login" />
-              <input type="reset" value="Reset" />
-            </div>
-          </form>
-          <a href="#">Home</a>
-          <a href="#">Sign Up</a>
-        </div>
-      </div>
-      <div class="genres">
+HEAD;
+//Logging in to the databse
+$host = 'fall-2019.cs.utexas.edu';
+$user = 'cs329e_mitra_milica96';
+$pwd = 'crux$Crept*task';
+$dbs = 'cs329e_mitra_milica96';
+$port = '3306';
+$connect = mysqli_connect ($host, $user, $pwd, $dbs, $port);
+
+// $test = $_COOKIE['username'];
+// echo $test;
+
+if (empty($connect)) {
+  die("mysqli_connect failed: " . mysqli_connect_error());
+}
+
+$table = "user";
+
+$script = $_SERVER['PHP_SELF'];
+
+if (isset($_COOKIE['username'])) {
+  print <<<SIGN
+<div class="navBar">
+<div class="nav">
+<a href="#">Welcome {$_COOKIE['username']}!</a>       
+<a href="#">Home</a>
+<a href="logOut.php">Log Out</a>
+</div>
+</div>
+SIGN;
+} else {
+  print <<<NOTIN
+<div class="navBar">
+<div class="nav">
+<a href="#login-form" rel="modal:open">Login</a>
+<form id="login-form" method="post" action=$script class="modal">
+<div class="login_modal">
+<label for="username">Username: </label>
+<input type="text" name="username" />
+<label for="password">Password</label>
+<input type="password" name="password">
+<input type="submit" value="Login" name="submit"/>
+<input type="reset" value="Reset" />
+</div>
+</form>
+<a href="#">Home</a>
+<a href="./registration.php">Sign Up</a>
+</div>
+</div>
+NOTIN;
+}
+
+print<<< CONT
+<div class="genres">
         <h4>Genres</h4>
         <button>Latest</button>
         <button>Action</button>
@@ -142,3 +180,30 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
   </body>
 </html>
+CONT;
+
+function purge ($str){
+  $purged_str = preg_replace("/\W/", "", $str);
+  return $purged_str;
+}
+
+if(isset($_POST["submit"])) {
+  $username = purge($_POST["username"]);
+  $password = purge($_POST["password"]);
+  $sql = "select * from user where username = '$username' and password = '$password'";
+  $result = mysqli_query ($connect, $sql);
+  $row = $result->fetch_row();
+
+  if (empty($row)) {
+    $message = "Username/Password does not exist";
+    echo "<script type='text/javascript'>alert('$message');</script>";
+  } else {
+    $message = "Successfully Logged in";
+    session_start();
+    setcookie("username", $username, time()+3600);
+    echo "<script type='text/javascript'>alert('$message');</script>";
+    header("location:index.php");
+  }
+}
+
+?>

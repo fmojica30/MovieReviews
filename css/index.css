@@ -5,7 +5,7 @@
 .wrapper {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: 150px 75px repeat(5, 250px) 500px;
+  grid-template-rows: 150px 75px repeat(5, 250px) 1000px;
   max-width: 1440px;
   margin: auto;
   grid-gap: 5px;
@@ -299,10 +299,21 @@ h1 {
   justify-items: center;
 }
 
+.creator_reviews {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, 1fr);
+  align-items: center;
+  justify-items: center;
+}
+
 .review {
   display: grid;
   grid-template-columns: 1fr 5fr;
-  background: #aaa;
+  background:#243447;
+  color: #fff;
   height: 90%;
   width: 90%;
   border-radius: 25px;

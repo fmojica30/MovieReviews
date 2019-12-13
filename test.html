@@ -1,0 +1,66 @@
+<div class='comment_sub'>
+  <form action='".date(' Y-m-d H:i:s')."'>
+    <input type='hidden' name='username' value='anonymous'>
+    <input type='hidden' name='date' value='".date(' Y-m-d H:i:s')."'>
+    <textarea name='review' cols='30' rows='10'></textarea>
+    <button type='submit' name='submit'>Review!</button>
+  </form>
+</div>
+
+// <div class="review">
+  // <img src="./images/logo_blue.png" alt="Logo" class="review_image">
+  // <p class="review_user">esketit</p>
+  // <p class="review_content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque, quidem nam? Dolores
+    recusandae veniam nihil rerum labore sunt, praesentium velit, rem harum voluptatibus sint. Nisi praesentium
+    inventore iusto aliquid reiciendis.</p>
+  // </div>
+
+<div class="user_reviews">
+  <div class="review">
+
+  </div>
+</div>
+<div class="other_reviews">
+  <div class="reviews">
+
+  </div>
+</div>
+
+
+<?php
+
+// Connect to the MySQL database
+$host = 'fall-2019.cs.utexas.edu';
+$user = 'cs329e_mitra_milica96';
+$pwd = 'crux$Crept*task';
+$dbs = 'cs329e_mitra_milica96';
+$port = '3306';
+$connect = mysqli_connect ($host, $user, $pwd, $dbs, $port);
+
+if(empty($connect))
+{
+
+}
+
+$table = "reviews";
+$movie_id = $_GET["movie_id"];
+
+$result = mysqli_query ($connect, "select * from $table where movie_id = '$movie_id'");
+
+if (empty($result))
+{
+  $response = " , , , , , ";
+}
+else
+{
+  while($row = $result->fetch_row()){
+    $response = $row[1].",".$row[2].",".$row[3].",".$row[4].",".$row[5].",".$row[6];
+    echo $response;
+  };
+}
+
+$result->free();
+
+// Close connection to the database
+mysqli_close($connect);
+?>

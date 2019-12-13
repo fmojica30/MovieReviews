@@ -1,0 +1,1 @@
+insert into reviews (username, date, review, movie_id)  values ('mm', '2019-06-12 12:43:44', 'This was a good movie', 1);

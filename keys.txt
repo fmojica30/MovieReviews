@@ -1,0 +1,14 @@
+sh MDB: 6564f1b545f85dd02cc8e9efe58744a6
+
+google: AIzaSyB72uCM3V1V0tRfg9YFqyrHM56uktX61qI
+
+nyt: dbYZ1pgtIvRPHGbBWkrslKmchz0Vsk92
+
+frozen movie id: 330457
+
+$host = 'fall-2019.cs.utexas.edu';
+$user = 'cs329e_mitra_milica96';
+$pwd = 'crux$Crept*task';
+$dbs = 'cs329e_mitra_milica96';
+$port = '3306';
+$connect = mysqli_connect ($host, $user, $pwd, $dbs, $port);
