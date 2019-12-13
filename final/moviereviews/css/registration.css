@@ -1,0 +1,145 @@
+* {
+  font-family: verdana;
+}
+
+
+.logo {
+  height: 93%;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 150px 75px repeat(3, 250px) ;
+  max-width: 1440px;
+  margin: auto;
+  grid-gap: 5px;
+}
+
+.header {
+  display: block;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 6;
+  margin: 0;
+  padding: 0;
+}
+
+
+h1 {
+  text-align: center;
+  font-size: 130px;
+  margin: 0px;
+  padding: 0px;
+  color: #243447;
+  margin-right: 23%;
+}
+
+
+h2 {
+  color: #243447;
+  font-size: 45px;
+  margin: 0px;
+  padding: 0px;
+}
+
+.header_sep {
+  display: grid;
+  height: 150px;
+  grid-template-columns: 1fr 5fr;
+}
+
+
+.navBar {
+  display: grid;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 6;
+  grid-template-columns: 1fr 3fr 1fr;
+}
+
+.nav {
+  display: grid;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  justify-items: center;
+}
+
+.nav a {
+  text-decoration: none;
+  font-size: 30px;
+  color: #687078;
+}
+
+.nav a:hover {
+  color: #2b2e31;
+}
+
+.reg {
+  display: grid;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 3;
+  grid-row-end: 5;
+  align-items: center;
+  justify-items: center;
+  background: #243447;
+  color: white;
+  border-radius: 10px;
+ }
+
+@keyframes in {
+  from {
+    transform: scale(1);
+  } to {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes out {
+  from {
+    transform: scale(1.05);
+  } to {
+    transform: scale(1);
+  }
+}
+
+
+#exist {
+  visibility: hidden;
+  font-size: 8px;
+  color: white;
+  
+}
+
+#insertAll {
+  visibility: hidden;
+  font-size: 12px;
+  color: white;
+}
+#wrong {
+  visibility: hidden;
+  font-size: 8px;
+  display: grid;
+  grid-column-start: 1;
+  grid-column-end: 3;
+
+}
+
+
+.login_modal {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 30px 30px;
+  align-items: center;
+  justify-items: center;
+}
+
+.login_modal button {
+  width: 50%;
+}
+
