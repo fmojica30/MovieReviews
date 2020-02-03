@@ -8,12 +8,11 @@ if (!isset($_COOKIE[$cookie_name]))
 }
 
 
-$host = 'fall-2019.cs.utexas.edu';
-$user = 'cs329e_mitra_milica96';
-$pwd = 'crux$Crept*task';
-$dbs = 'cs329e_mitra_milica96';
-$port = '3306';
-$connect = mysqli_connect ($host, $user, $pwd, $dbs, $port);
+$host = 'localhost';
+$user = 'admin';
+$pwd = 'randomPassword';
+$dbs = 'movi';
+$connect = mysqli_connect ($host, $user, $pwd, $dbs);
 
 if (empty($connect))
 {

@@ -5,12 +5,11 @@ function purge ($str){
 }
 
 if(isset($_POST["submit"])) {
-  $host = 'fall-2019.cs.utexas.edu';
-  $user = 'cs329e_mitra_milica96';
-  $pwd = 'crux$Crept*task';
-  $dbs = 'cs329e_mitra_milica96';
-  $port = '3306';
-  $connect = mysqli_connect ($host, $user, $pwd, $dbs, $port);
+  $host = 'localhost';
+  $user = 'admin';
+  $pwd = 'randomPassword';
+  $dbs = 'movi';
+  $connect = mysqli_connect ($host, $user, $pwd, $dbs);
   $table = 'user';
 
   $username = purge($_POST["username"]);

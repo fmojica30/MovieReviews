@@ -24,12 +24,11 @@ print <<< HEAD
       </div>
 HEAD;
 //Logging in to the databse
-$host = 'fall-2019.cs.utexas.edu';
-$user = 'cs329e_mitra_milica96';
-$pwd = 'crux$Crept*task';
-$dbs = 'cs329e_mitra_milica96';
-$port = '3306';
-$connect = mysqli_connect ($host, $user, $pwd, $dbs, $port);
+$host = 'localhost';
+$user = 'admin';
+$pwd = 'randomPassword';
+$dbs = 'movi';
+$connect = mysqli_connect ($host, $user, $pwd, $dbs);
 
 // $test = $_COOKIE['username'];
 // echo $test;
@@ -54,9 +53,9 @@ if (isset($_COOKIE['username'])) {
   print <<<SIGN
 <div class="navBar">
 <div class="nav">
-<a href="/cs329e-mitra/moviereviews/myPage.php">My Page</a>       
-<a href="/cs329e-mitra/moviereviews/index.php">Home</a>
-<a href="/cs329e-mitra/moviereviews/logOut.php">Log Out</a>
+<a href="../../myPage.php">My Page</a>       
+<a href="../../index.php">Home</a>
+<a href="../../logOut.php">Log Out</a>
 </div>
 </div>
 SIGN;
@@ -65,7 +64,7 @@ SIGN;
 <div class="navBar">
 <div class="nav">
 <a href="#login-form" rel="modal:open" class="login">Login</a>
-<form id="login-form" method="post" action="/cs329e-mitra/moviereviews/logIn.php" class="modal">
+<form id="login-form" method="post" action="../../logIn.php" class="modal">
 <div class="login_modal">
 <label for="username">Username: </label>
 <input type="text" name="username" />
@@ -75,8 +74,8 @@ SIGN;
 <input type="reset" value="Reset" />
 </div>
 </form>
-<a href="/cs329e-mitra/moviereviews/index.php">Home</a>
-<a href="./registration.php">Sign Up</a>
+<a href="../../index.php">Home</a>
+<a href="../../registration.php">Sign Up</a>
 </div>
 </div>
 NOTIN;
@@ -170,12 +169,11 @@ if (isset($_COOKIE['username'])) {
 }
 
 if(isset($_POST["comment_submit"])) {
-  $host = 'fall-2019.cs.utexas.edu';
-  $user = 'cs329e_mitra_milica96';
-  $pwd = 'crux$Crept*task';
-  $dbs = 'cs329e_mitra_milica96';
-  $port = '3306';
-  $connect = mysqli_connect ($host, $user, $pwd, $dbs, $port);
+  $host = 'localhost';
+  $user = 'admin';
+  $pwd = 'randomPassword';
+  $dbs = 'movi';
+  $connect = mysqli_connect ($host, $user, $pwd, $dbs);
 
   $username = $_COOKIE["username"];
   $date = $_POST["date"];
