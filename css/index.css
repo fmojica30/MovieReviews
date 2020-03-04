@@ -92,7 +92,8 @@ h2 {
 }
 
 .movie_1 img {
-  height: 100%;
+  height: 427px;
+  width: 288px;
   border-radius: 5%;
   animation: out .56s;
 }
@@ -102,6 +103,11 @@ h2 {
   border-radius: 5%;
 }
 
+.movie_submit {
+  display: block;
+  background-color: transparent;
+  border: none;
+}
 .movie_2 {
   display: grid;
   grid-column: 2/3;
@@ -111,7 +117,8 @@ h2 {
 }
 
 .movie_2 img {
-  height: 100%;
+  height: 427px;
+  width: 288px;
   border-radius: 5%;
   animation: out .56s;
 }
@@ -135,7 +142,8 @@ h2 {
 }
 
 .movie_3 img {
-  height: 100%;
+  height: 427px;
+  width: 288px;
   border-radius: 5%;
   animation: out .56s;
 }
@@ -297,6 +305,7 @@ h1 {
   grid-template-rows: repeat(4, 1fr);
   align-items: center;
   justify-items: center;
+  overflow: scroll;
 }
 
 .creator_reviews {
@@ -307,16 +316,6 @@ h1 {
   grid-template-rows: repeat(4, 1fr);
   align-items: center;
   justify-items: center;
-}
-
-.review {
-  display: grid;
-  grid-template-columns: 1fr 5fr;
-  background:#243447;
-  color: #fff;
-  height: 90%;
-  width: 90%;
-  border-radius: 25px;
   overflow: scroll;
 }
 
@@ -329,4 +328,69 @@ h1 {
 }
 
 
+/* reviews  */
+/* .user_reviews {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  grid-template-rows: 60px auto;
+} */
+
+.other_reviews {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  grid-template-rows: 60px auto;
+}
+
+.review_list {
+  display: block;
+  width: 100%;
+  height: 700px;
+  margin-right: 5px;
+  margin-left: 5px;
+  overflow: scroll;
+}
+
+.review {
+  width: 95%;
+  border-bottom: 2px solid #aaaaaa;
+  height: 230px;
+  overflow: scroll;
+}
+
+.review_user {
+  position: relative;
+  left: 25.6%;
+  right: 4.27%;
+  top: 16.58%;
+  bottom: 64.77%;
+  width: 300px;
+  display: inline-block;
+  margin-top: 0px;
+}
+
+
+.review_content {
+  position: relative;
+  width: 500px;
+  height: 120px;
+  left: 25.6%;
+  right: 4.27%;
+  top: 20.45%;
+  bottom: 21.24%;
+}
+
+.review_image {
+  position: relative;
+  left: 4.27%;
+  right: 78.67%;
+  top: 16.58%;
+  bottom: 17.1%;
+  height: 50px;
+  width: 50px;
+  margin: 0px;
+  padding: 0px;
+  float: left;
+}
 

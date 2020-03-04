@@ -5,7 +5,7 @@
 .wrapper {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: 150px 75px 400px 500px;
+  grid-template-rows: 150px 75px 400px 500px 500px 700px;
   max-width: 1440px;
   margin: auto;
   grid-gap: 5px;
@@ -34,6 +34,10 @@
   grid-column-start: 1;
   grid-column-end: 6;
   grid-template-columns: 1fr 3fr 1fr;
+}
+
+.login {
+  display: none;
 }
 
 .nav {
@@ -182,4 +186,125 @@ h1 {
   width: 90%;
   border-radius: 20px;
   border: 0;
+}
+
+/* comments */
+
+.input_div {
+  grid-template-columns: 5fr 1fr;
+}
+.comment_sub {
+  display:grid;
+  grid-row-start: 5/6;
+  grid-column: 1/6;
+  margin: auto;
+  
+}
+
+textarea {
+  width: 740px;
+  grid-row-start: 2;
+  grid-row-end:3;
+}
+
+.review_title {
+  font-size: 18px;
+}
+
+.review_button {
+  height: 50px;
+  width: auto;
+  margin-top: 15px;
+  border-radius: 20px;
+  background-color: #243447;
+  border: none;
+  color: #fff;
+  font-size: 35px;
+}
+
+.review_button:hover {
+  color: #243447;
+  background-color: #aaaaaa;
+}
+
+.review_button:active {
+  background-color: #243447;
+  color: #aaaaaa;
+}
+
+/* reviews  */
+.reviews {
+  display: grid;
+  grid-row: 6/7;
+  grid-column: 1/6;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.user_reviews {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  grid-template-rows: 60px auto;
+}
+
+.other_reviews {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  grid-template-rows: 60px auto;
+}
+
+.review_list {
+  display: block;
+  width: 100%;
+  height: 700px;
+  margin-right: 5px;
+  margin-left: 5px;
+  overflow: scroll;
+
+}
+
+.review {
+  width: 95%;
+  border-bottom: 2px solid #aaaaaa;
+  height: 230px;
+  overflow: scroll;
+}
+
+.review_user {
+  position: relative;
+  left: 25.6%;
+  right: 4.27%;
+  top: 16.58%;
+  bottom: 64.77%;
+  width: 300px;
+  display: inline-block;
+  margin-top: 0px;
+}
+
+
+.review_content {
+  position: relative;
+  width: 450px;
+  height: 120px;
+  left: 25.6%;
+  right: 4.27%;
+  top: 20.45%;
+  bottom: 21.24%;
+}
+
+.review_image {
+  position: relative;
+  left: 4.27%;
+  right: 78.67%;
+  top: 16.58%;
+  bottom: 17.1%;
+  height: 50px;
+  width: 50px;
+  margin: 0px;
+  padding: 0px;
+  float: left;
 }
